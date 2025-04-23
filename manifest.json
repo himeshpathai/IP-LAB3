@@ -1,7 +1,7 @@
 {
     "name": "Himesh Pathai - Personal Profile",
     "short_name": "Himesh Profile",
-    "start_url": "/index.html",
+    "start_url": "/IP-LAB3/index.html",
     "display": "standalone",
     "description": "A personal portfolio showcasing Himesh Pathai's skills, experience, and contact information.",
     "lang": "en",
