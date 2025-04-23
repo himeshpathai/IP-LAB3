@@ -13,8 +13,8 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             return cache.addAll([
-                '/index.html',
-                '/offline.html',
+                '/IP-LAB3/index.html',
+                '/IP-LAB3/offline.html' 
             ]);
         })
     );
