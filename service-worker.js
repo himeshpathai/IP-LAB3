@@ -1,5 +1,4 @@
 const CACHE_NAME = 'pwa-cache-v1';
-const OFFLINE_URL = '/offline.html';
 
 const HOSTNAME_WHITELIST = [
     self.location.hostname,
@@ -14,7 +13,7 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME).then(cache => {
             return cache.addAll([
                 '/index.html',
-                OFFLINE_URL
+                '/offline.html',
             ]);
         })
     );
