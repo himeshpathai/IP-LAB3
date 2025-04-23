@@ -1,0 +1,64 @@
+{
+    "name": "Himesh Pathai - Personal Profile",
+    "short_name": "Himesh Profile",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "description": "A personal portfolio showcasing Himesh Pathai's skills, experience, and contact information.",
+    "lang": "en",
+    "dir": "auto",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "orientation": "any",
+    "icons": [
+      {
+        "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "https://www.pwabuilder.com/assets/icons/icon_192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "sizes": "2880x1800",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "windows",
+        "url": ""
+      }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+      {
+        "name": "About Me",
+        "url": "/#about",
+        "description": "Learn more about Himesh Pathai"
+      },
+      {
+        "name": "Skills",
+        "url": "/#skills",
+        "description": "Explore technical and creative skills"
+      },
+      {
+        "name": "Experience",
+        "url": "/#experience",
+        "description": "View professional experience and projects"
+      },
+      {
+        "name": "Contact",
+        "url": "/#contact",
+        "description": "Get in touch with Himesh Pathai"
+      }
+    ]
+  }
+  
