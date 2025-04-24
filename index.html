@@ -3,7 +3,7 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TD2C7B18Z6"></script>
-    <script>navigator.serviceWorker.register("service-worker.js")</script> 
+    <script>if('serviceWorker' in navigator) { navigator.serviceWorker.register("service-worker.js"); }</script> 
     <link rel="manifest" href="manifest.json" />
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -170,6 +170,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pwa-features">PWA Tests</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -280,6 +283,81 @@
         <p>Feel free to reach out to me on <a href="#">LinkedIn</a> or drop an email at <a href="mailto:himeshpathai2003@gmail.com.com">himeshpathai2003@gmail.com</a>.</p>
     </section>
 
+    <!-- PWA Features Testing Section -->
+    <section id="pwa-features" class="container my-5">
+        <h2 class="section-title">PWA Features Test</h2>
+        <div class="alert alert-info">
+            <p id="pwa-status">Checking service worker status...</p>
+        </div>
+        
+        <div class="row mt-4">
+            <!-- Fetch/Offline Testing -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light">
+                    <div class="card-header">
+                        <h4>1. Offline Capability Test</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Test if your website works offline after caching:</p>
+                        <ol>
+                            <li>Click the button below</li>
+                            <li>Turn off your network (airplane mode)</li>
+                            <li>Refresh the page - it should still load!</li>
+                        </ol>
+                        <button id="test-offline" class="btn btn-primary">Test Offline Capability</button>
+                        <p id="fetch-status" class="mt-3"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background Sync Testing -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light">
+                    <div class="card-header">
+                        <h4>2. Background Sync Test</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Test if requests are queued when offline:</p>
+                        <ol>
+                            <li>Turn off your network</li>
+                            <li>Enter some test data</li>
+                            <li>Click the button to send data</li>
+                            <li>Turn network back on - data will sync</li>
+                        </ol>
+                        <div class="form-group">
+                            <input type="text" id="sync-data" class="form-control" placeholder="Enter test data">
+                        </div>
+                        <button id="test-sync" class="btn btn-success">Test Background Sync</button>
+                        <p id="sync-status" class="mt-3"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Push Notification Testing -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light">
+                    <div class="card-header">
+                        <h4>3. Push Notification Test</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Test push notifications:</p>
+                        <ol>
+                            <li>Enter notification details</li>
+                            <li>Click the button to send</li>
+                            <li>Accept notification permission if asked</li>
+                        </ol>
+                        <div class="form-group">
+                            <input type="text" id="notification-title" class="form-control mb-2" placeholder="Notification title">
+                            <input type="text" id="notification-body" class="form-control" placeholder="Notification message">
+                        </div>
+                        <button id="test-push" class="btn btn-danger">Test Notification</button>
+                        <p id="push-status" class="mt-3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
@@ -302,6 +380,8 @@
             document.body.style.color = document.body.classList.contains('light-mode') ? '#121212' : '#f0f0f0';
         });
     </script>
+    <!-- PWA Feature Testing Script -->
+    <script src="pwa-tester.js"></script>
 
 </body>
 </html>
